@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>untitled - editor</title>
+<title>untitled - spades</title>
 <style type="text/css" media="screen">
     #editor { 
         position: absolute;
@@ -42,7 +42,7 @@ Ctrl-S to save file
     ipcRenderer.on('file-opened', (event, filename) => {
         //When the main process has opened a file
         console.log("Open file: " + filename);
-        document.title = filename + " - editor"
+        document.title = filename + " - spades"
 
         fs.readFile(filename, 'utf8', (err, data) => {
             if(err) {
