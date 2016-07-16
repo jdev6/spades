@@ -1,0 +1,251 @@
+{
+    "abap": "abap",
+
+    "abc": "abc",
+
+    "as": "actionscript",
+
+    "ada": "ada",
+
+    "applescript": "applescript",
+    "scpt": "applescript",
+    "scptd": "applescript",
+
+    "asc": "asciidoc",
+
+    "asm": "assembly_x86",
+
+    "ahk": "autohotkey",
+
+    "bat": "batchfile",
+
+    "cpp": "c_cpp",
+    "hpp": "c_cpp",
+
+    "clj": "clojure",
+    "cljs": "clojure",
+    "cljc": "clojure",
+    "edn": "clojure",
+
+    "cobol": "cobol",
+    "cob": "cobol",
+
+    "coffee": "coffee",
+
+    "cfc": "coldfusion",
+
+    "cs": "csharp",
+
+    "css": "css",
+
+    "dart": "dart",
+
+    "diff": "diff",
+
+    "d": "d",
+
+    "e": "eiffel",
+
+    "ejs": "ejs",
+
+    "ex": "elixir",
+    
+    "elm": "elm",
+    
+    "erl": "erlang",
+    
+    "forth": "forth",
+
+    "f": "fortran",
+    "for": "fortran",
+    "f90": "fortran",
+    "f95": "fortran",
+    "f03": "fortran",
+    "f15": "fortran",
+
+    "ftl": "ftl",
+
+    "feature": "gherkin",
+
+    "gitignore": "gitignore",
+
+    "glsl": "glsl",
+
+    "go": "golang",
+
+    "groovy": "groovy",
+
+    "haml": "haml",
+
+    "hbs": "handlebars",
+    "handlebars": "handlebars",
+
+    "hs": "haskell",
+
+    "hx": "haxe",
+
+    "html": "html",
+
+    "ini": "ini",
+
+    "io": "io",
+
+    "jack": "jack",
+
+    "jade": "jade",
+
+    "java": "java",
+    "class": "java",
+
+    "js": "javascript",
+
+    "jq": "jsoniq",
+    "jqy": "jsoniq",
+
+    "json": "json",
+
+    "jsp": "jsp",
+
+    "jsx": "jsx",
+
+    "jl": "julia",
+
+    "latex": "latex",
+
+    "less": "less",
+
+    "liquid": "liquid",
+
+    "lisp": "lisp",
+    "el": "lisp",
+    "cl": "lisp",
+    "lsp": "lisp",
+
+    "ls": "live_script",
+    "ls": "livescript",
+
+    "lsl": "lsl",
+
+    "lua": "lua",
+
+    "lp": "luapage",
+
+    "md": "markdown",
+
+    "m": "matlab",
+
+    "mel": "mel",
+
+    "myd": "mysql",
+
+    "nix": "nix",
+
+    "nsh": "nsis",
+
+    "m": "objectivec",
+
+    "ml": "ocaml",
+    "mli": "ocaml",
+
+    "pas": "pascal",
+
+    "pl": "perl",
+
+    "pdd" :"pgsql",
+
+    "php": "php",
+
+    "text": "plain_text",
+
+    "ps1": "powershell",
+
+    "_": "prolog isnt here because perl already uses .pl",
+
+    "properties": "properties",
+
+    "proto": "protobuf",
+
+    "py" :"python",
+
+    "cshtml": "razor",
+
+    "rdoc": "rdoc",
+
+    "rhtml": "rhtml",
+
+    "r": "r",
+
+    "rst": "rst",
+
+    "rb": "ruby",
+
+    "rs": "rust",
+
+    "sass": "sass",
+
+    "scad": "scad",
+
+    "scala": "scala",
+    "sc": "scala",
+
+    "scm": "scheme",
+
+    "scss": "scss",
+
+    "sh": "sh",
+
+    "sjs": "sjs",
+
+    "soy": "soy_template",
+
+    "space": "space",
+
+    "sql": "sql",
+
+    "sdf": "sqlserver",
+
+    "styl": "stylus",
+
+    "svg": "svg",
+
+    "swift": "swift",
+
+    "i": "swig",
+
+    "tcl": "tcl",
+
+    "tex": "text",
+
+    "textile": "textile",
+
+    "txt": "text",
+
+    "toml": "toml",
+
+    "twig": "twig",
+
+    "ts": "typescript",
+
+    "vala": "vala",
+    "vapi": "vala",
+
+    "vb": "vbscript",
+
+    "vm": "velocity",
+
+    "v": "verilog",
+
+    "vhdl": "vhdl",
+
+    "wpgm": "wollok",
+    "wlk": "wollok",
+    "wtest": "wollok",
+
+    "xml": "xml",
+
+    "xq": "xquery",
+    "xqy": "xquery",
+    "xquery": "xquery",
+
+    "yaml": "yaml"
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>untitled - editor</title>
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+</head>
+<body>
+
+<div id="editor">
+Ctrl-O to open file
+Ctrl-S to save file
+</div>
+
+<script src="ace-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    Object.defineProperty(Object.prototype, 'map', {
+        value: (f, ctx) => {
+            ctx = ctx || this;
+            var self = this, result = {};
+            Object.keys(self).forEach(function(k) {
+                result[k] = f.call(ctx, self[k], k, self); 
+            });
+            return result;
+        }
+    });
+
+    const fs = require('fs');
+    const {ipcRenderer} = require('electron');
+    const fileExtensions = require('./file-extensions.json');
+
+    const editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+
+    ipcRenderer.on('file-opened', (event, filename) => {
+        //When the main process has opened a file
+        console.log("Open file: " + filename);
+        document.title = filename + " - editor"
+
+        fs.readFile(filename, 'utf8', (err, data) => {
+            if(err) {
+                console.log(err);
+                return 1;
+            }
+
+            fileName = filename;
+
+            editor.setValue(data); //Set text to file's text
+            editor.gotoLine(1); //Go to first line
+
+            var fileExtension = 
+                (/(\.[^.]+)$/g. //Regex that matches file extension with the dot
+                exec(filename.toLowerCase())[0]) //Get first match
+                .substring(1) //Remove the .
+
+            var mode = "ace/mode/" + (fileExtensions[fileExtension] || "text")
+
+            console.log("Set mode " + mode)
+            editor.getSession().setMode(mode || "");
+        });
+    });
+
+    var fileName = "untitled";
+
+    var commands = [
+    /*{
+        name: 'openPrompt',
+        bindKey: {win: 'Ctrl-Space', mac: 'Command-Space'},
+        exec: (editor) => {
+            console.log("Toggle prompt");
+            promptOpen = !promptOpen;
+
+            if (promptOpen) {
+                //prompt.value = "kek";
+            }
+        },
+        readOnly: true
+    },*/
+    {
+        name: 'openFile',
+        bindKey: {win: 'Ctrl-O', mac: 'Command-O'},
+        exec: (editor) => {
+            //Send file open signal to main process
+            ipcRenderer.send('file-open');
+        },
+        readOnly: true
+    },
+    {
+        name: 'saveFile',
+        bindKey: {win: 'Ctrl-S', mac: 'Command-S'},
+        exec: (editor) => {
+            //Save file
+            fs.writeFileSync(fileName, editor.getValue())
+        }
+    }
+    ]
+
+    var promptOpen = false;
+    var prompt = document.getElementById("prompt");
+
+    for (i in commands) {
+        editor.commands.addCommand(commands[i]);
+    }
+
+</script>
+</body>
+</html>

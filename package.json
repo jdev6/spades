@@ -1,0 +1,26 @@
+{
+    "name": "spades",
+    "version": "0.0.2",
+    "description": "Text editor based on ace",
+
+    "license": "MIT",
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jdev6/spades.git"
+    },
+    
+    "bugs": {
+        "url": "https://github.com/jdev6/spades/issues"
+    },
+
+    "main": "main.js",
+
+    "devDependencies": {
+        "electron-prebuilt": "^1.2.7"
+    },
+
+    "scripts": {
+        "start": "electron ."
+    }
+}
