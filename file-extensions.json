@@ -94,6 +94,7 @@
 
     "jade": "jade",
 
+    "jav": "java",
     "java": "java",
     "class": "java",
 
@@ -229,7 +230,7 @@
     "vala": "vala",
     "vapi": "vala",
 
-    "vb": "vbscript",
+    "vbs": "vbscript",
 
     "vm": "velocity",
 
