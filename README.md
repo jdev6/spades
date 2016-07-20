@@ -5,8 +5,10 @@ Text editor built with [electron](http://electron.atom.io/) and [ace](https://ac
 #Configuration
 
 The path in which configuration files will be stored is:
-            Windows: %appdata%/spades
-            Everyting else: $HOME/.spades
+
+    Windows: %appdata%/spades
+    Everyting else: $HOME/.spades
+
 
 Configuration files use the json format:
 
