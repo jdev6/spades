@@ -44,9 +44,9 @@ let promptCommands = {
 
             case "build":
                 if (spades.builds[val])
-                    spades.build = spades.builds[val]
+                    spades.build = spades.builds[val];
                 else
-                    spades.log(`Build '${val}' doesn't exist`, "SET")
+                    spades.log(`Build '${val}' doesn't exist`, "SET");
                 break;
 
             default:
@@ -104,9 +104,9 @@ let promptCommands = {
     },
 
     help: (_, spades) => {
-        spades.log(helpMessage, "HELP")
+        spades.log(helpMessage, "HELP");
     }
-}
+};
 
 function execPromptCmd(cmdStr, spades) {
     let words = cmdStr.split(" ");

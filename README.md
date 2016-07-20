@@ -2,6 +2,10 @@
 
 Text editor built with [electron](http://electron.atom.io/) and [ace](https://ace.c9.io)
 
+![](screenshots/1.png)
+![](screenshots/2.png)
+![](screenshots/3.png)
+
 #Configuration
 
 The path in which configuration files will be stored is:
@@ -49,7 +53,7 @@ The commands are:
     set [var] [value]: set the value of var
     get [var]:         get the value of var
     list [var]:        list all possible options for var
-    build              builds the project using the current build system
+    build:             builds the project using the current build system
 
 Example:
 

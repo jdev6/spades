@@ -8,6 +8,10 @@ let ipcRenderer = require('electron').ipcRenderer; //IpcRenderer (to communicate
 let fileExtensions = require('./file-extensions.json'); //File extensions associated with syntax modes
 let execPromptCmd = require('./prompt-commands.js');
 
+
+let spades; //spades global instance
+
+
 /* HELPER FUNCTIONS */
 let $id = (id) => document.getElementById(id);
 
@@ -95,7 +99,7 @@ let commands = {
         },
         readOnly: true
     }
-}
+};
 
 /*CLASS DECLARATIONS*/
 class File {
@@ -143,8 +147,6 @@ class File {
     }
     */
 }
-
-let spades; //spades global instance
 
 class Spades {
     //Main spades editor class
@@ -207,7 +209,7 @@ class Spades {
                 },
                 exec: commands[name].exec,
                 readOnly: commands[name].readOnly
-            }
+            };
 
             this.editor.commands.addCommand(cmd);
             this.infoBar.commands.addCommand(cmd);
@@ -309,7 +311,7 @@ class Spades {
 
         child.on('close', (code) => {
             this.log(`${cmd} finished with exit code ${code}`, "BUILD");
-        })
+        });
     }
 
     setTheme(path) {
@@ -319,7 +321,7 @@ class Spades {
 
     log(what, type) {
         //prints to electron console, stdout and infobar
-        let msg = `[${type || "INFO"}] ${what}`
+        let msg = `[${type || "INFO"}] ${what}`;
         process.stdout.write(msg + '\n');
         console.log(msg);
         if (this.infoBar) {
